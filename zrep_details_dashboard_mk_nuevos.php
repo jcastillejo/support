@@ -17,6 +17,8 @@ $result=mysql_query($query)or die (mysql_error());
 
 
 
+//HOLA DATA
+
 function cargaData_renovacion($fecha){
 	
 	if($_GET['paquete']=='PAQUETE PREMIUM'){
@@ -29,7 +31,7 @@ function cargaData_renovacion($fecha){
 		$result=mysql_query($query)or die (mysql_error());
 
 	}
-	elseif($_GET['paquete']=='Paquete Semana Económica'){
+	elseif($_GET['paquete']=='Paquete Semana Econï¿½mica'){
 		
 		$query="select o.numerodeordeninterno,o.accountname,o.contactname,date_format(o.fechadeiniciodesuscripcion,'%Y %M'),date_format(o.fechadefindesuscripcion, '%m-%d-%Y'),o.tipo,p.productCode
 				from zoho_salesorder o join zoho_salesdetail d on o.salesorderid=d.salesorderid join zoho_product p on p.productid=d.productid
@@ -40,7 +42,7 @@ function cargaData_renovacion($fecha){
 
 	}
 	
-	elseif($_GET['paquete']=='Analítica'){
+	elseif($_GET['paquete']=='Analï¿½tica'){
 		
 		$query="select o.numerodeordeninterno,o.accountname,o.contactname,date_format(o.fechadeiniciodesuscripcion,'%Y %M'),date_format(o.fechadefindesuscripcion, '%m-%d-%Y'),o.tipo,p.productCode
 				from zoho_salesorder o join zoho_salesdetail d on o.salesorderid=d.salesorderid join zoho_product p on p.productid=d.productid
@@ -82,7 +84,7 @@ function cargaData_renovacion($fecha){
 		
 	}
 	
-	elseif($_GET['paquete']=='Perú Económico'){
+	elseif($_GET['paquete']=='Perï¿½ Econï¿½mico'){
 		
 		$query="select o.numerodeordeninterno,o.accountname,o.contactname,date_format(o.fechadeiniciodesuscripcion,'%Y %M'),
 				date_format(o.fechadefindesuscripcion, '%m-%d-%Y'),o.tipo,p.productCode
