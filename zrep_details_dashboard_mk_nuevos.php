@@ -7,7 +7,7 @@ require '../connect.php';
 
 $paquete=$_GET['paquete'];
 
-
+///hola hola holaaaaaa
 
 $_fecha=$_GET['fecha'];
 
